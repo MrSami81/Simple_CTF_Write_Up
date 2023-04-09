@@ -1,0 +1,76 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-09 07:52 CDT
+NSE: Loaded 155 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 07:52
+Completed NSE at 07:52, 0.00s elapsed
+Initiating NSE at 07:52
+Completed NSE at 07:52, 0.00s elapsed
+Initiating NSE at 07:52
+Completed NSE at 07:52, 0.00s elapsed
+Initiating Ping Scan at 07:52
+Scanning 10.10.189.241 [4 ports]
+Completed Ping Scan at 07:52, 0.20s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 07:52
+Completed Parallel DNS resolution of 1 host. at 07:52, 0.10s elapsed
+Initiating SYN Stealth Scan at 07:52
+Scanning 10.10.189.241 [1000 ports]
+Discovered open port 21/tcp on 10.10.189.241
+Discovered open port 80/tcp on 10.10.189.241
+Discovered open port 2222/tcp on 10.10.189.241
+Completed SYN Stealth Scan at 07:52, 14.52s elapsed (1000 total ports)
+Initiating Service scan at 07:52
+Scanning 3 services on 10.10.189.241
+Completed Service scan at 07:53, 6.49s elapsed (3 services on 1 host)
+NSE: Script scanning 10.10.189.241.
+Initiating NSE at 07:53
+NSE: [ftp-bounce] PORT response: 500 Illegal PORT command.
+Completed NSE at 07:53, 30.92s elapsed
+Initiating NSE at 07:53
+Completed NSE at 07:53, 2.16s elapsed
+Initiating NSE at 07:53
+Completed NSE at 07:53, 0.00s elapsed
+Nmap scan report for 10.10.189.241
+Host is up (0.18s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 3.0.3
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.8.86.229
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 4
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: TIMEOUT
+80/tcp   open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Apache2 Ubuntu Default Page: It works
+| http-robots.txt: 2 disallowed entries 
+|_/ /openemr-5_0_1_3 
+2222/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 294269149ecad917988c27723acda923 (RSA)
+|   256 9bd165075108006198de95ed3ae3811c (ECDSA)
+|_  256 12651b61cf4de575fef4e8d46e102af6 (ED25519)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 07:53
+Completed NSE at 07:53, 0.00s elapsed
+Initiating NSE at 07:53
+Completed NSE at 07:53, 0.00s elapsed
+Initiating NSE at 07:53
+Completed NSE at 07:53, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 54.73 seconds
+           Raw packets sent: 2010 (88.416KB) | Rcvd: 13 (556B)
